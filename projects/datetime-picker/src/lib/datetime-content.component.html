@@ -14,7 +14,11 @@
         </ngx-mat-timepicker>
     </div>
     <div class="actions">
-        <button mat-button (click)="datepicker.ok()" mat-stroked-button [color]="datepicker._color" cdkFocusInitial
+        <button mat-button (click)="datepicker.cancel()" mat-icon-button [color]="datepicker._color" cdkFocusInitial
+            [disabled]="!valid">
+            <mat-icon>cancel</mat-icon>
+        </button>
+        <button mat-button (click)="datepicker.ok()" mat-icon-button [color]="datepicker._color" cdkFocusInitial
             [disabled]="!valid">
             <mat-icon>done</mat-icon>
         </button>
